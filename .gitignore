@@ -1,0 +1,20 @@
+# IDE
+.idea/
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+
+
+# Work In Progress
+*.wip
+*.wip.*
+
+
+# Libraries
+venv/
+venv_windows/
+node_modules/
+
+# Data
+#data/
+

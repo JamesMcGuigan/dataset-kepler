@@ -1,0 +1,52 @@
+#
+# This file is input for pip-compile. Update this file, then run:
+#
+#    pip-compile
+#    pip-sync
+#
+# Or to check for version bump upgrades:
+#
+#    pip-review
+#
+
+# Python Buildchain Dependencies
+wheel
+pip-review
+pip-tools
+
+
+# Utility
+simplejson
+property-cached
+pprint
+orderedset
+sortedcontainers==0.9.6
+
+
+# SciPy - https://www.scipy.org/install.html
+ipython
+jupyter
+jupyterlab
+numpy
+pandas
+scipy
+sympy
+
+
+# Machine Learning
+fastai
+sklearn
+tensorflow
+keras
+
+
+# Chart Plotting
+matplotlib
+seaborn
+
+
+# Functional Programming
+pydash    # https://pydash.readthedocs.io/en/latest/
+cytoolz   # https://toolz.readthedocs.io/en/latest/
+fn        # https://github.com/kachayev/fn.py
+funcy     # https://funcy.readthedocs.io/en/latest/
