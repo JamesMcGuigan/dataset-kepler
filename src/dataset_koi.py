@@ -69,7 +69,7 @@ koi_column_types = {
     ]
 }
 koi_fillna = {
-    'kepler_name': '',
+    # 'kepler_name': '',
     'koi_score':   0,
     'koi_comment': '',
     'koi_tce_delivname': '',
