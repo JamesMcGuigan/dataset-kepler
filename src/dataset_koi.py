@@ -9,8 +9,7 @@ import pandas as pd
 # - NOTE: columns with SINGLE value (after cleanup): [ koi_parm_prov ]
 koi_columns = {
     'id':          [
-        'kepid', 'kepoi_name',
-        # 'kepoi_star',                           # Column added by PreProcessing
+        'kepid', 'kepoi_star', 'kepoi_name',  # NOTE: kepoi_star added by PreProcessing
     ],
     'archive':     [
         'kepler_name', 'koi_disposition',
@@ -94,8 +93,7 @@ koi['all'].set_index('kepoi_name', inplace=True, drop=False)
 
 
 # Injected Fields
-koi_columns['id'] += ['kepoi_star']
-koi['all'].insert( koi['all'].columns.get_loc('kepoi_name')+1, 'kepoi_star', value=None)
+koi['all'].insert( koi['all'].columns.get_loc('kepoi_name'), 'kepoi_star', value=None)
 koi['all']['kepoi_star'] = koi['all']['kepoi_name'].apply(lambda str: re.sub(r'\..*$', '', str))
 
 
