@@ -1,6 +1,6 @@
 import re
-import pandas as pd
 
+import pandas as pd
 
 # Kepler Dataset Columns are subdivided into categories
 # - Source: https://exoplanetarchive.ipac.caltech.edu/docs/API_kepcandidate_columns.html
@@ -65,6 +65,12 @@ koi_column_types = {
     ],
     'datetime64': [
         'koi_vet_date',
+    ],
+    'uint8': [
+        'koi_fpflag_nt',
+        'koi_fpflag_ss',
+        'koi_fpflag_co',
+        'koi_fpflag_ec',
     ]
 }
 koi_fillna = {
@@ -91,13 +97,12 @@ koi['all'] = pd.read_csv('./data/kepler_koi.csv',
 koi['all'].set_index('kepoi_name', inplace=True, drop=False)
 
 
-
 # Injected Fields
 koi['all'].insert( koi['all'].columns.get_loc('kepoi_name'), 'kepoi_star', value=None)
 koi['all']['kepoi_star'] = koi['all']['kepoi_name'].apply(lambda str: re.sub(r'\..*$', '', str))
 
 
-# Convert Categorical Columns
+# Convert Columns dtypes - before postprocessing
 for category, columns in koi_column_types.items():
     for key in columns:
         koi['all'][key] = koi['all'][key].astype(category)
@@ -114,7 +119,13 @@ for key, func in koi_mappings.items():
         koi['all'][key] = koi['all'][key].apply( func )
 
 
-# Create Datastructure from Columns
+# Convert Columns dtypes - after postprocessing
+for category, columns in koi_column_types.items():
+    for key in columns:
+        koi['all'][key] = koi['all'][key].astype(category)
+
+
+# Export Datastructure
 for key, columns in koi_columns.items():
     # columns = ['kepoi_name'] + columns
     koi[key] = koi['all'][ columns ]
