@@ -62,6 +62,7 @@ koi_column_types = {
         'koi_fpflag_nt', 'koi_fpflag_ss', 'koi_fpflag_co', 'koi_fpflag_ec',
         'koi_quarters',
         'koi_sparprov',
+        'koi_fittype',
     ],
     'datetime64': [
         'koi_vet_date',
