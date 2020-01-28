@@ -26,5 +26,6 @@ During its over nine and a half years of service, Kepler observed 530,506 stars 
 - Exoplanet Information:
     - Youtube - How to Find an Exoplanet: https://www.youtube.com/watch?v=ahX_0XHp1vM
     - Transit Method - Light Curve Tutorial: https://www.cfa.harvard.edu/~avanderb/tutorial/tutorial.html
+    - Methods of Detecting Explanets: https://www.planetary.org/explore/space-topics/exoplanets/how-to-search-for-exoplanets.html
     
 ---
