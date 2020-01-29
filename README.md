@@ -6,6 +6,10 @@ and estimate how many stars in the Milky Way have such planets.
 
 During its over nine and a half years of service, Kepler observed 530,506 stars and detected 2,662 planets.
 
+## Slideshow Presentation
+
+- [https://jamesmcguigan.github.io/dataset-kepler/](https://jamesmcguigan.github.io/dataset-kepler/)
+
 ## Notebooks
 - [0_Keplar_Tabular_View.ipynb](0_Keplar_Tabular_View.ipynb)
 - [1_Exoplanet_Archive_Information.ipynb](1_Exoplanet_Archive_Information.ipynb)
