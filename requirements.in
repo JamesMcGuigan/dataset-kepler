@@ -36,7 +36,7 @@ sympy
 # Machine Learning
 fastai
 sklearn
-tensorflow
+tensorflow>=2.0.1
 keras
 
 
